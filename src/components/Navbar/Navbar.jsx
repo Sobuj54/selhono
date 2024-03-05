@@ -24,7 +24,7 @@ const Navbar = () => {
               to="/"
               className="flex items-center gap-1 text-2xl font-dm-serif">
               <img
-                className="w-auto h-6 text-yellow-300"
+                className="w-auto h-8 text-yellow-300"
                 src={logo}
                 alt="logo"
               />
