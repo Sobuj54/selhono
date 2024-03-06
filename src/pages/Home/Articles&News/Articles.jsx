@@ -18,8 +18,10 @@ const Articles = () => {
   ];
   return (
     <section className="my-28">
-      <div className="w-1/2 mx-auto text-center">
-        <h3 className="text-5xl font-dm-serif mb-5">Articles and News</h3>
+      <div className="md:w-1/2 mx-auto text-center">
+        <h3 className="text-3xl md:text-5xl font-dm-serif mb-5">
+          Articles and News
+        </h3>
         <p className="text-base">
           It is a long established fact that a reader will be distracted by the
           of readable content of a page when looking&apos;s at its layouts the
@@ -37,7 +39,9 @@ const Articles = () => {
               alt="img"
               className="object-cover rounded-t-[50px]"
             />
-            <h5 className="font-dm-serif text-2xl mt-3">{article.title}</h5>
+            <h5 className="font-dm-serif text-xl md:text-2xl mt-3">
+              {article.title}
+            </h5>
             <p className="mt-4">{article.date}</p>
           </div>
         ))}
