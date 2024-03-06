@@ -24,10 +24,10 @@ const Follow = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         {houses.map((house, index) => (
           <div key={index}>
-            <div className="h-[548px] rounded-tr-[250px] overflow-hidden">
+            <div className="h-[400px] md:h-[548px] rounded-tr-[250px] overflow-hidden">
               <img
                 src={house.img}
                 alt="house"
