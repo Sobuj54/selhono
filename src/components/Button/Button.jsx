@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-const Button = ({ text, bgColor }) => {
+const Button = ({ text, bgColor, textColor }) => {
   return (
     <button
-      className={`bg-[${bgColor}] text-white w-52 rounded-md py-4 font-sans text-lg font-semibold`}>
-      {text}
+      className={`${bgColor} ${textColor} w-52 rounded-md py-4 font-sans text-lg font-semibold`}>
+      {text} --&gt;
     </button>
   );
 };
@@ -12,6 +12,7 @@ const Button = ({ text, bgColor }) => {
 Button.propTypes = {
   text: PropTypes.string,
   bgColor: PropTypes.string,
+  textColor: PropTypes.string,
 };
 
 export default Button;
