@@ -2,6 +2,7 @@ import Articles from "./Articles&News/Articles";
 import Banner from "./Banner/Banner";
 import BottomHero from "./BottomHero/BottomHero";
 import CallUs from "./CallUs/CallUs";
+import Companies from "./Companies/Companies";
 import Experience from "./Experience/Experience";
 import Follow from "./Follow/Follow";
 import ProjectPlan from "./ProjectPlan/ProjectPlan";
@@ -14,6 +15,7 @@ const Home = () => {
       <ProjectPlan />
       <CallUs />
       <Testimonial />
+      <Companies />
       <Follow />
       <Experience />
       <Articles />

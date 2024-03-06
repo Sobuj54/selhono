@@ -21,9 +21,9 @@ const Navbar = () => {
         <div className="flex-shrink-0">
           <Link
             to="/"
-            className="flex items-center gap-1 text-2xl font-dm-serif">
-            <img className="w-auto h-8 text-yellow-300" src={logo} alt="logo" />
-            SElHONO
+            className="flex items-center gap-1 text-3xl font-dm-serif">
+            <img className="w-auto h-9 text-yellow-300" src={logo} alt="logo" />
+            SELHONO
           </Link>
         </div>
 
@@ -70,12 +70,12 @@ const Navbar = () => {
         )}
 
         {/* visible menu for large devices */}
-        <div className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
+        <div className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10 ">
           {links.map((link, index) => (
             <NavLink
               key={index}
               to={link.to}
-              className={`text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80 ${({
+              className={`text-xl font-semibold text-black transition-all duration-200 hover:text-opacity-80 ${({
                 isActive,
               }) => (isActive ? styles.active : "")}`}>
               {link.name}
