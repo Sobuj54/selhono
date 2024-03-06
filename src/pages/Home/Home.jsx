@@ -1,3 +1,4 @@
+import Articles from "./Articles&News/Articles";
 import Banner from "./Banner/Banner";
 import BottomHero from "./BottomHero/BottomHero";
 import CallUs from "./CallUs/CallUs";
@@ -13,6 +14,7 @@ const Home = () => {
       <CallUs />
       <Testimonial />
       <Follow />
+      <Articles />
       <BottomHero />
     </div>
   );
