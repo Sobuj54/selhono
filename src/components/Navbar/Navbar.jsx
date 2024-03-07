@@ -17,12 +17,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="flex items-center justify-between h-16 lg:h-24">
         <div className="flex-shrink-0">
           <Link
             to="/"
             className="flex items-center gap-1 text-3xl font-dm-serif">
-            <img className="w-auto h-9 text-yellow-300" src={logo} alt="logo" />
+            <img className="w-auto text-yellow-300 h-9" src={logo} alt="logo" />
             SELHONO
           </Link>
         </div>

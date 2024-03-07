@@ -7,7 +7,7 @@ const MiniHero = ({ text, img }) => {
         backgroundImage: `url(${img})`,
         height: "356px",
       }}
-      className="bg-cover">
+      className="bg-cover ">
       <div className="flex items-center justify-center h-full">
         <h2 className="text-4xl text-white md:text-6xl font-dm-serif">
           {text}
