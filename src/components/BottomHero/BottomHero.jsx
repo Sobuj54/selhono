@@ -1,4 +1,4 @@
-import Button from "../../../components/Button/Button";
+import Button from "../Button/Button";
 
 const BottomHero = () => {
   return (
@@ -8,11 +8,11 @@ const BottomHero = () => {
         height: "430px",
       }}
       className="mt-20 bg-cover">
-      <div className="w-8/12 lg:w-1/2 mx-auto items-center h-full flex flex-col justify-center  gap-5 text-white">
-        <h3 className="text-3xl md:text-6xl font-dm-serif text-center">
+      <div className="flex flex-col items-center justify-center w-8/12 h-full gap-5 mx-auto text-white lg:w-1/2">
+        <h3 className="text-3xl text-center md:text-6xl font-dm-serif">
           Wanna Join The Interno?
         </h3>
-        <p className="text-base md:text-xl text-center">
+        <p className="text-base text-center md:text-xl">
           It is a long established fact will be distracted.
         </p>
         <Button
