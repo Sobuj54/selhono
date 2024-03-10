@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const IndividualProject = ({ project }) => {
-  const { image, title } = project;
+  const { _id, image, title } = project;
 
   return (
     <div className="xl:w-[580px]">
@@ -18,7 +19,7 @@ const IndividualProject = ({ project }) => {
           <p className="font-jost text-xl">Decor / Architecture</p>
         </div>
         <div className="rounded-full cursor-pointer hover:bg-slate-500 transition-all duration-200 ease-in-out hover:text-white w-12 h-12 flex items-center justify-center font-bold overflow-hidden bg-[#F4F0EC]">
-          &gt;
+          <Link to={`/project-details/${_id}`}>&gt;</Link>
         </div>
       </div>
     </div>

@@ -6,6 +6,9 @@ import Spinner from "../components/Spinner/Spinner";
 const Services = lazy(() => import("../pages/Services/Services"));
 const Pricing = lazy(() => import("../pages/Pricing/Pricing"));
 const Project = lazy(() => import("../pages/Project/Project"));
+const ProjectDetails = lazy(() =>
+  import("../pages/ProjectDetails/ProjectDetails")
+);
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Spinner />}>
             <Project />
+          </Suspense>
+        ),
+      },
+      {
+        path: "project-details/:id",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <ProjectDetails />
           </Suspense>
         ),
       },
