@@ -2,10 +2,15 @@ import PropTypes from "prop-types";
 
 const IndividualProject = ({ project }) => {
   const { image, title } = project;
+
   return (
-    <div className="md:w-[580px]">
+    <div className="xl:w-[580px]">
       <div>
-        <img src={image} alt={title} className="h-[600px] object-cover" />
+        <img
+          src={image}
+          alt={title}
+          className="h-450px lg:h-[600px] object-cover"
+        />
       </div>
       <div className="mt-3 flex items-center justify-between">
         <div>
