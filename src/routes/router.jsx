@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
 import Spinner from "../components/Spinner/Spinner";
+import PageNotFound from "../pages/404/PageNotFound";
 const Services = lazy(() => import("../pages/Services/Services"));
 const Pricing = lazy(() => import("../pages/Pricing/Pricing"));
 const Project = lazy(() => import("../pages/Project/Project"));
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <PageNotFound />,
     children: [
       {
         path: "/",

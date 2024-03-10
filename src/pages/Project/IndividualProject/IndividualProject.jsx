@@ -18,9 +18,12 @@ const IndividualProject = ({ project }) => {
           <h3 className="font-dm-serif text-2xl">{title}</h3>
           <p className="font-jost text-xl">Decor / Architecture</p>
         </div>
-        <div className="rounded-full cursor-pointer hover:bg-slate-500 transition-all duration-200 ease-in-out hover:text-white w-12 h-12 flex items-center justify-center font-bold overflow-hidden bg-[#F4F0EC]">
-          <Link to={`/project-details/${_id}`}>&gt;</Link>
-        </div>
+
+        <Link
+          to={`/project-details/${_id}`}
+          className="rounded-full cursor-pointer hover:bg-slate-500 transition-all duration-200 ease-in-out hover:text-white w-12 h-12 flex items-center justify-center font-bold overflow-hidden bg-[#F4F0EC]">
+          &gt;
+        </Link>
       </div>
     </div>
   );
