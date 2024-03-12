@@ -10,6 +10,7 @@ const Project = lazy(() => import("../pages/Project/Project"));
 const ProjectDetails = lazy(() =>
   import("../pages/ProjectDetails/ProjectDetails")
 );
+const Blogs = lazy(() => import("../pages/Blogs/Blogs"));
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Spinner />}>
             <ProjectDetails />
+          </Suspense>
+        ),
+      },
+      {
+        path: "blog",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <Blogs />
           </Suspense>
         ),
       },
