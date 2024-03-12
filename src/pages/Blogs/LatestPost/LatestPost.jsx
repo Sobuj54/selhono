@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Spinner from "../../../components/Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 const LatestPost = () => {
   const {
@@ -35,12 +36,14 @@ const LatestPost = () => {
         <div className="flex flex-col gap-7 lg:justify-between">
           <h4 className="font-dm-serif text-2xl">{latestBlog?.title}</h4>
           <p className="font-jost">{latestBlog?.description}</p>
-          <div className="flex items-center justify-between">
+          <Link
+            to={`/blog-details/${latestBlog._id}`}
+            className="flex items-center justify-between">
             <p>{new Date(latestBlog?.createdAt).toLocaleDateString()}</p>
             <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center font-semibold">
               &gt;
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

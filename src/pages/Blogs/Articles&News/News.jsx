@@ -19,7 +19,7 @@ const News = ({ allBlogs }) => {
             <div className="flex items-center justify-between mt-5">
               <p>{new Date(blog?.createdAt).toLocaleDateString()}</p>
               <Link
-                to={`/blog/${blog._id}`}
+                to={`/blog-details/${blog._id}`}
                 className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center font-semibold">
                 &gt;
               </Link>

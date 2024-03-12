@@ -16,7 +16,7 @@ const Blogs = () => {
   } = useQuery({
     queryKey: ["Articles"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:3000/api/v1/blogs");
+      const res = await axios.get("http://localhost:3000/api/v1/blogs/all");
       return res.data.data;
     },
   });
