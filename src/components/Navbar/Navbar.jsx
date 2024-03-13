@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "/logo.svg";
-import styles from "./Navbar.module.css";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: "Services", to: "/services" },
     { name: "Project", to: "/project" },
     { name: "Blog", to: "/blog" },
-    { name: "Contact", to: "/contact" },
   ];
 
   return (
@@ -21,8 +20,8 @@ const Navbar = () => {
         <div className="flex-shrink-0">
           <Link
             to="/"
-            className="flex items-center gap-1 text-3xl font-dm-serif">
-            <img className="w-auto text-yellow-300 h-9" src={logo} alt="logo" />
+            className="flex items-center gap-1 text-2xl font-dm-serif">
+            <img className="w-auto text-yellow-300 h-7" src={logo} alt="logo" />
             SELHONO
           </Link>
         </div>
@@ -75,9 +74,9 @@ const Navbar = () => {
             <NavLink
               key={index}
               to={link.to}
-              className={`text-xl font-semibold text-black transition-all duration-200 hover:text-opacity-80 ${({
+              className={`text-lg font-semibold text-black transition-all duration-200 hover:text-opacity-80 ${({
                 isActive,
-              }) => (isActive ? styles.active : "")}`}>
+              }) => (isActive ? "active" : "")}`}>
               {link.name}
             </NavLink>
           ))}
@@ -96,7 +95,7 @@ const Navbar = () => {
               to={link.to}
               className={`text-base font-semibold text-white/90 transition-all duration-200 hover:text-opacity-80 ${({
                 isActive,
-              }) => (isActive ? styles.active : "")}`}>
+              }) => (isActive ? "active" : "")}`}>
               {link.name}
             </NavLink>
           ))}
