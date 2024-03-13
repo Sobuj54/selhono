@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import MiniHero from "../../components/MiniHero/MiniHero";
 import Spinner from "../../components/Spinner/Spinner";
 import Details from "./Details/Details";
+import LatestNews from "./LatestNews/LatestNews";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -18,7 +19,6 @@ const BlogDetails = () => {
       const res = await axios.get(
         `http://localhost:3000/api/v1/blogs/blog/${id}`
       );
-      console.log(res.data);
       return res.data.data;
     },
   });
@@ -33,9 +33,11 @@ const BlogDetails = () => {
       ) : error ? (
         <p className="text-center my-5">Something went wrong.</p>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-5 my-20">
-          <div className="col-span-2"></div>
-          <div className="col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 my-20 gap-20">
+          <div className="col-span-1">
+            <LatestNews id={id} />
+          </div>
+          <div className="lg:col-span-2">
             <Details blog={blog} />
           </div>
         </div>
