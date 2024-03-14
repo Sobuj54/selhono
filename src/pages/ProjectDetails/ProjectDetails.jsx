@@ -13,7 +13,7 @@ const ProjectDetails = () => {
     queryKey: [id],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/projects/id/${id}`
+        `https://selhono-server.onrender.com/api/v1/projects/id/${id}`
       );
       return res.data.data;
     },

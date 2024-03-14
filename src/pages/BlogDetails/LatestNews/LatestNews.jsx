@@ -13,7 +13,7 @@ const LatestNews = ({ id }) => {
     queryKey: ["latest blogs"],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/blogs/latest-blogs/${id}`
+        `https://selhono-server.onrender.com/api/v1/blogs/latest-blogs/${id}`
       );
       return res.data.data;
     },

@@ -20,7 +20,7 @@ const Blogs = () => {
     queryKey: ["Articles", pageNo],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/blogs/all?page=${pageNo}&limit=6`
+        `https://selhono-server.onrender.com/api/v1/blogs/all?page=${pageNo}&limit=6`
       );
       return res.data.data;
     },

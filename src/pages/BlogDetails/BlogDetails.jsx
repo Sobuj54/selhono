@@ -17,7 +17,7 @@ const BlogDetails = () => {
     queryKey: ["blog", id],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/blogs/blog/${id}`
+        `https://selhono-server.onrender.com/api/v1/blogs/blog/${id}`
       );
       return res.data.data;
     },

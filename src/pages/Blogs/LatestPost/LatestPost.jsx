@@ -11,7 +11,9 @@ const LatestPost = () => {
   } = useQuery({
     queryKey: ["latest"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:3000/api/v1/blogs/latest");
+      const res = await axios.get(
+        "https://selhono-server.onrender.com/api/v1/blogs/latest"
+      );
       return res.data.data;
     },
   });
